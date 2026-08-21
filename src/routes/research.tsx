@@ -38,7 +38,7 @@ function ResearchPage() {
   const { result, error, isLoading, generate } = useAiTool("research");
   const [topic, setTopic] = useState("");
   const [goal, setGoal] = useState("");
-  const [depth, setDepth] = useState(DEPTHS[1]);
+  const [depth, setDepth] = useState<string>(DEPTHS[1]!);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -40,9 +40,9 @@ function EmailPage() {
   const { result, error, isLoading, generate } = useAiTool("email");
   const [purpose, setPurpose] = useState("");
   const [context, setContext] = useState("");
-  const [tone, setTone] = useState(TONES[0]);
-  const [audience, setAudience] = useState(AUDIENCES[0]);
-  const [length, setLength] = useState(LENGTHS[1]);
+  const [tone, setTone] = useState<string>(TONES[0]!);
+  const [audience, setAudience] = useState<string>(AUDIENCES[0]!);
+  const [length, setLength] = useState<string>(LENGTHS[1]!);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
